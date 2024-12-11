@@ -38,7 +38,6 @@ def part_1(rules: list[list[int]], pages: list[list[int]]) -> int:
 def part_2(rules: list[list[int]], pages: list[list[int]]) -> int:
     m = 0
     for i, page in enumerate(pages):
-        print(f"Working on {i}/{len(pages)}: {page}")
         rules_before = {i: r[0] for i, r in enumerate(rules)}
         rules_after = {i: r[1] for i, r in enumerate(rules)}
         if _check(page, rules_before, rules_after):
